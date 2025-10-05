@@ -31,8 +31,12 @@ struct SetupGameView: View {
             Button {
                 onStart?()
             } label: {
-                Text("Start Match")
+                Text("Start")
             }
+            .background(
+                Capsule(style: .continuous)
+                    .fill(Color(hex: "ABC270"))
+            )
         }
     }
 }
@@ -48,7 +52,12 @@ struct ChoiceButton: View {
         }
         .background(
             Capsule(style: .continuous)
-                .fill(isSelected ? Color.accentColor.opacity(1.0) : Color.gray.opacity(0.15))
+                .fill(isSelected ? Color(hex: "472a0e") : Color(hex: "ABC270"))
         )
     }
+}
+
+#Preview {
+    let match = TennisMatch()
+    SetupGameView(match: match)
 }

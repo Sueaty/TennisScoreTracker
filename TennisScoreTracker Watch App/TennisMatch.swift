@@ -78,10 +78,7 @@ final class TennisMatch: ObservableObject {
             leftGames: leftWonGames,
             rightGames: rightWonGames
         )
-        history.append(MatchSnapshot(leftPoints: leftCurrentPoints,
-                                     rightPoints: rightCurrentPoints,
-                                     leftGames: leftWonGames,
-                                     rightGames: rightWonGames))
+        history.append(snapshot)
         if history.count > 10 {
             history.removeFirst()
         }
@@ -118,6 +115,31 @@ final class TennisMatch: ObservableObject {
             }
         }
     }
+    
+    func currentlyWinning(forLeft: Bool) -> Bool {
+        // if nil, same score
+        if forLeft {
+            if leftWonGames > rightWonGames {
+                return true
+            } else if leftWonGames < rightWonGames {
+                return false
+            } else if leftCurrentPoints > rightCurrentPoints {
+                return true
+            } else {
+                return false
+            }
+        } else {
+            if leftWonGames < rightWonGames {
+                return true
+            } else if leftWonGames > rightWonGames {
+                return false
+            } else if leftCurrentPoints < rightCurrentPoints {
+                return true
+            } else {
+                return false
+            }
+        }
+    }
 
     func leftLabel() -> String {
         label(
@@ -136,7 +158,7 @@ final class TennisMatch: ObservableObject {
     private func label(for point: Int, vs opponent: Int) -> String {
         if point >= 3 && opponent >= 3 {
             if point == opponent { return "Deuce" }
-            if point == opponent + 1 { return "Advantage" }
+            if point == opponent + 1 { return "AD" }
         }
         switch point {
         case 0: return "Love"

@@ -18,24 +18,25 @@ struct ScoreView: View {
                 PointCard(
                     teamName: match.leftTeam.name,
                     gamesWonCount: match.leftWonGames,
-                    currentScore: match.leftLabel())
-                {
+                    currentScore: match.leftLabel(),
+                    isWinning: match.currentlyWinning(forLeft: true)
+                ) {
                     match.point(toLeft: true)
                 }
                 Spacer()
                 PointCard(
                     teamName: match.rightTeam.name,
                     gamesWonCount: match.rightWonGames,
-                    currentScore: match.rightLabel())
-                {
+                    currentScore: match.rightLabel(),
+                    isWinning: match.currentlyWinning(forLeft: false)
+                ) {
                     match.point(toLeft: false)
                 }
             }
+            
             // 컨트롤
-            HStack(spacing: 8) {
-                Button {
-                    match.undo()
-                } label: {
+            HStack {
+                Button(action: match.undo) {
                     VStack(alignment: .center) {
                         Image(systemName: "arrow.uturn.backward")
                         Text("undo")
@@ -62,14 +63,15 @@ struct PointCard: View {
     let teamName: String
     let gamesWonCount: Int
     let currentScore: String
+    let isWinning: Bool
     let addPointAction: () -> Void
+    
     var body: some View {
         Button(action: addPointAction) {
             VStack(alignment: .center) {
                 Text(teamName)
                 Text("\(gamesWonCount)")
                     .font(.title).bold()
-                
                 Text(currentScore)
                     .font(.headline)
                 Text("Tap")
@@ -78,17 +80,23 @@ struct PointCard: View {
             }
             .frame(maxWidth: .infinity)
         }
-        .buttonStyle(ThickCardButtonStyle())
+        .buttonStyle(ThickCardButtonStyle(isWinning: isWinning))
     }
 }
 
 struct ThickCardButtonStyle: ButtonStyle {
+    var isWinning: Bool = false
+    
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .padding(.vertical, 12)
             .background(
                 RoundedRectangle(cornerRadius: 14, style: .continuous)
-                    .fill(configuration.isPressed ? Color.accentColor.opacity(0.25) : Color.gray.opacity(0.15))
+                    .fill(
+                        isWinning
+                        ? Color(hex: "FDA769").opacity(configuration.isPressed ? 0.7 : 0.9)
+                        : Color(hex: "ABC270").opacity(configuration.isPressed ? 0.7 : 1.0)
+                    )
             )
             .overlay(
                 RoundedRectangle(cornerRadius: 14, style: .continuous)
