@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		81DA94EC2E92B68F00E9CF21 /* TennisScoreTracker Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 81DA94EB2E92B68F00E9CF21 /* TennisScoreTracker Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		81DA952A2E92FD9F00E9CF21 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 81DA95292E92FD9F00E9CF21 /* Localizable.xcstrings */; };
+		81DA952B2E92FD9F00E9CF21 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 81DA95292E92FD9F00E9CF21 /* Localizable.xcstrings */; };
+		81DA952C2E92FD9F00E9CF21 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 81DA95292E92FD9F00E9CF21 /* Localizable.xcstrings */; };
+		81DA952D2E92FD9F00E9CF21 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 81DA95292E92FD9F00E9CF21 /* Localizable.xcstrings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,7 @@
 		81DA94EB2E92B68F00E9CF21 /* TennisScoreTracker Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TennisScoreTracker Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81DA94FA2E92B69000E9CF21 /* TennisScoreTracker Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TennisScoreTracker Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81DA95042E92B69000E9CF21 /* TennisScoreTracker Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TennisScoreTracker Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		81DA95292E92FD9F00E9CF21 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -101,6 +106,7 @@
 		81DA94DE2E92B68F00E9CF21 = {
 			isa = PBXGroup;
 			children = (
+				81DA95292E92FD9F00E9CF21 /* Localizable.xcstrings */,
 				81DA94EF2E92B68F00E9CF21 /* TennisScoreTracker Watch App */,
 				81DA94FD2E92B69000E9CF21 /* TennisScoreTracker Watch AppTests */,
 				81DA95072E92B69000E9CF21 /* TennisScoreTracker Watch AppUITests */,
@@ -241,6 +247,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ko,
 			);
 			mainGroup = 81DA94DE2E92B68F00E9CF21;
 			minimizedProjectReferenceProxies = 1;
@@ -262,6 +269,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81DA952B2E92FD9F00E9CF21 /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +277,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81DA952A2E92FD9F00E9CF21 /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,6 +285,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81DA952C2E92FD9F00E9CF21 /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +293,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81DA952D2E92FD9F00E9CF21 /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,6 +400,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -444,6 +456,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 			};
 			name = Release;
 		};

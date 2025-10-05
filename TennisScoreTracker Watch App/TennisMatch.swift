@@ -141,23 +141,25 @@ final class TennisMatch: ObservableObject {
         }
     }
 
-    func leftLabel() -> String {
+    func leftLabel() -> LocalizedStringResource {
         label(
             for: leftCurrentPoints,
             vs: rightCurrentPoints
         )
     }
     
-    func rightLabel() -> String {
+    func rightLabel() -> LocalizedStringResource {
         label(
             for: rightCurrentPoints,
             vs: leftCurrentPoints
         )
     }
 
-    private func label(for point: Int, vs opponent: Int) -> String {
+    private func label(for point: Int, vs opponent: Int) -> LocalizedStringResource {
         if point >= 3 && opponent >= 3 {
-            if point == opponent { return "Deuce" }
+            if point == opponent {
+                return LocalizedStringResource(stringLiteral: "Deuce")
+            }
             if point == opponent + 1 { return "AD" }
         }
         switch point {

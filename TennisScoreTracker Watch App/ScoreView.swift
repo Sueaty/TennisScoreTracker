@@ -62,7 +62,7 @@ struct ScoreView: View {
 struct PointCard: View {
     let teamName: String
     let gamesWonCount: Int
-    let currentScore: String
+    let currentScore: LocalizedStringResource
     let isWinning: Bool
     let addPointAction: () -> Void
     
@@ -72,7 +72,7 @@ struct PointCard: View {
                 Text(teamName)
                 Text("\(gamesWonCount)")
                     .font(.title).bold()
-                Text(currentScore)
+                Text(String(localized: currentScore))
                     .font(.headline)
                 Text("Tap")
                     .font(.caption2)
@@ -112,4 +112,5 @@ struct ThickCardButtonStyle: ButtonStyle {
     ScoreView(match: match) {
         print("back")
     }
+    .environment(\.locale, .init(identifier: "ko"))
 }

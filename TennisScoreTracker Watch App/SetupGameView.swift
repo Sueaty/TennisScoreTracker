@@ -48,7 +48,8 @@ struct ChoiceButton: View {
     
     var body: some View {
         Button(action: action) {
-            Text(title)
+            let localizedText = LocalizedStringResource(stringLiteral: title)
+            Text(String(localized: localizedText))
         }
         .background(
             Capsule(style: .continuous)
@@ -60,4 +61,5 @@ struct ChoiceButton: View {
 #Preview {
     let match = TennisMatch()
     SetupGameView(match: match)
+        .environment(\.locale, .init(identifier: "ko"))
 }
