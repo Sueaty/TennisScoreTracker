@@ -17,7 +17,7 @@ struct ScoreView: View {
             HStack {
                 PointCard(
                     teamName: match.leftTeam.name,
-                    gamesWonCount: match.leftGames,
+                    gamesWonCount: match.leftWonGames,
                     currentScore: match.leftLabel())
                 {
                     match.point(toLeft: true)
@@ -25,7 +25,7 @@ struct ScoreView: View {
                 Spacer()
                 PointCard(
                     teamName: match.rightTeam.name,
-                    gamesWonCount: match.rightGames,
+                    gamesWonCount: match.rightWonGames,
                     currentScore: match.rightLabel())
                 {
                     match.point(toLeft: false)

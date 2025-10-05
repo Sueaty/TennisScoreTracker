@@ -36,3 +36,19 @@ struct SetupGameView: View {
         }
     }
 }
+
+struct ChoiceButton: View {
+    let title: String
+    let isSelected: Bool
+    let action: () -> Void
+    
+    var body: some View {
+        Button(action: action) {
+            Text(title)
+        }
+        .background(
+            Capsule(style: .continuous)
+                .fill(isSelected ? Color.accentColor.opacity(1.0) : Color.gray.opacity(0.15))
+        )
+    }
+}

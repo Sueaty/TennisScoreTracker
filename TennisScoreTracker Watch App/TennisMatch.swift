@@ -27,100 +27,125 @@ struct MatchSnapshot: Equatable {
     var rightGames: Int
 }
 
-// MARK: - Scoring Engine
+// MARK: - Scoring
 final class TennisMatch: ObservableObject {
     @Published var gameType: GameType = .singles
-    @Published var noAdScoring: Bool = false
-    @Published var leftTeam = Team(name: "You / Team A")
-    @Published var rightTeam = Team(name: "Opponent / Team B")
+    let leftTeam = Team(name: "ME")
+    let rightTeam = Team(name: "💩")
 
-    @Published private(set) var leftPoints: Int = 0
-    @Published private(set) var rightPoints: Int = 0
+    @Published private(set) var leftCurrentPoints: Int = 0
+    @Published private(set) var leftWonGames: Int = 0
+    
+    @Published private(set) var rightCurrentPoints: Int = 0
+    @Published private(set) var rightWonGames: Int = 0
 
-    @Published private(set) var leftGames: Int = 0
-    @Published private(set) var rightGames: Int = 0
-
-    private var isNoAdActive: Bool { noAdScoring || gameType == .doubles }
+    private var isNoAdActive: Bool { gameType == .doubles }
 
     private var history: [MatchSnapshot] = []
 
-    // Give a point to a side and apply tennis rules (deuce/advantage/game)
+    
     func point(toLeft: Bool) {
         pushHistory()
-        if toLeft { leftPoints += 1 } else { rightPoints += 1 }
+        if toLeft {
+            leftCurrentPoints += 1
+        } else {
+            rightCurrentPoints += 1
+        }
         evaluateGameIfEnded()
         WKInterfaceDevice.current().play(.click)
     }
 
     func undo() {
         guard let last = history.popLast() else { return }
-        leftPoints = last.leftPoints
-        rightPoints = last.rightPoints
-        leftGames = last.leftGames
-        rightGames = last.rightGames
-        WKInterfaceDevice.current().play(.directionDown)
-    }
-
-    func resetCurrentGame() {
-        pushHistory()
-        leftPoints = 0
-        rightPoints = 0
-        WKInterfaceDevice.current().play(.retry)
+        leftCurrentPoints = last.leftPoints
+        rightCurrentPoints = last.rightPoints
+        leftWonGames = last.leftGames
+        rightWonGames = last.rightGames
     }
 
     func resetMatch() {
-        pushHistory()
-        leftPoints = 0
-        rightPoints = 0
-        leftGames = 0
-        rightGames = 0
-        WKInterfaceDevice.current().play(.failure)
+        leftCurrentPoints = 0
+        rightCurrentPoints = 0
+        leftWonGames = 0
+        rightWonGames = 0
+        history.removeAll()
     }
-
-    // MARK: - Helpers
+    
     private func pushHistory() {
-        history.append(MatchSnapshot(leftPoints: leftPoints,
-                                     rightPoints: rightPoints,
-                                     leftGames: leftGames,
-                                     rightGames: rightGames))
-        if history.count > 50 { history.removeFirst() }
+        let snapshot = MatchSnapshot(
+            leftPoints: leftCurrentPoints,
+            rightPoints: rightCurrentPoints,
+            leftGames: leftWonGames,
+            rightGames: rightWonGames
+        )
+        history.append(MatchSnapshot(leftPoints: leftCurrentPoints,
+                                     rightPoints: rightCurrentPoints,
+                                     leftGames: leftWonGames,
+                                     rightGames: rightWonGames))
+        if history.count > 10 {
+            history.removeFirst()
+        }
     }
 
     private func evaluateGameIfEnded() {
         // No-Ad scoring: at 40–40 (both >=3), the next point wins the game
-        if isNoAdActive, leftPoints >= 3, rightPoints >= 3, leftPoints != rightPoints {
-            if leftPoints > rightPoints { leftGames += 1 } else { rightGames += 1 }
-            leftPoints = 0; rightPoints = 0
+        if isNoAdActive,
+           leftCurrentPoints >= 3,
+           rightCurrentPoints >= 3,
+           leftCurrentPoints != rightCurrentPoints {
+            if leftCurrentPoints > rightCurrentPoints {
+                leftWonGames += 1
+            } else {
+                rightWonGames += 1
+            }
+            leftCurrentPoints = 0
+            rightCurrentPoints = 0
             WKInterfaceDevice.current().play(.success)
             return
         }
 
         // Standard advantage scoring
-        if leftPoints >= 4 || rightPoints >= 4 {
-            if abs(leftPoints - rightPoints) >= 2 {
-                if leftPoints > rightPoints { leftGames += 1 } else { rightGames += 1 }
-                leftPoints = 0; rightPoints = 0
+        if leftCurrentPoints >= 4 || rightCurrentPoints >= 4 {
+            if abs(leftCurrentPoints - rightCurrentPoints) >= 2 {
+                if leftCurrentPoints > rightCurrentPoints {
+                    leftWonGames += 1
+                } else {
+                    rightWonGames += 1
+                }
+                leftCurrentPoints = 0
+                rightCurrentPoints = 0
                 WKInterfaceDevice.current().play(.success)
             }
         }
     }
 
-    func leftLabel() -> String { label(for: leftPoints, vs: rightPoints, isLeft: true) }
-    func rightLabel() -> String { label(for: rightPoints, vs: leftPoints, isLeft: false) }
+    func leftLabel() -> String {
+        label(
+            for: leftCurrentPoints,
+            vs: rightCurrentPoints
+        )
+    }
+    
+    func rightLabel() -> String {
+        label(
+            for: rightCurrentPoints,
+            vs: leftCurrentPoints
+        )
+    }
 
-    private func label(for p: Int, vs o: Int, isLeft: Bool) -> String {
-        if p >= 3 && o >= 3 {
-            if p == o { return "Deuce" }
-            if p == o + 1 { return "Advantage" }
+    private func label(for point: Int, vs opponent: Int) -> String {
+        if point >= 3 && opponent >= 3 {
+            if point == opponent { return "Deuce" }
+            if point == opponent + 1 { return "Advantage" }
         }
-        switch p {
+        switch point {
         case 0: return "Love"
         case 1: return "15"
         case 2: return "30"
         case 3: return "40"
         default:
             // In rare transient states (e.g. tapping fast before evaluation), show numeric lead
-            return "+\(p - 3)"
+            return "+\(point - 3)"
         }
     }
 }
