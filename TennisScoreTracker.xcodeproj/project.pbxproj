@@ -1,0 +1,671 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		81DA94EC2E92B68F00E9CF21 /* TennisScoreTracker Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 81DA94EB2E92B68F00E9CF21 /* TennisScoreTracker Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		81DA94ED2E92B68F00E9CF21 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 81DA94DF2E92B68F00E9CF21 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 81DA94EA2E92B68F00E9CF21;
+			remoteInfo = "TennisScoreTracker Watch App";
+		};
+		81DA94FB2E92B69000E9CF21 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 81DA94DF2E92B68F00E9CF21 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 81DA94EA2E92B68F00E9CF21;
+			remoteInfo = "TennisScoreTracker Watch App";
+		};
+		81DA95052E92B69000E9CF21 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 81DA94DF2E92B68F00E9CF21 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 81DA94EA2E92B68F00E9CF21;
+			remoteInfo = "TennisScoreTracker Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		81DA95112E92B69000E9CF21 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				81DA94EC2E92B68F00E9CF21 /* TennisScoreTracker Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		81DA94E52E92B68F00E9CF21 /* TennisScoreTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TennisScoreTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		81DA94EB2E92B68F00E9CF21 /* TennisScoreTracker Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TennisScoreTracker Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		81DA94FA2E92B69000E9CF21 /* TennisScoreTracker Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TennisScoreTracker Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		81DA95042E92B69000E9CF21 /* TennisScoreTracker Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TennisScoreTracker Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		81DA94EF2E92B68F00E9CF21 /* TennisScoreTracker Watch App */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "TennisScoreTracker Watch App";
+			sourceTree = "<group>";
+		};
+		81DA94FD2E92B69000E9CF21 /* TennisScoreTracker Watch AppTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "TennisScoreTracker Watch AppTests";
+			sourceTree = "<group>";
+		};
+		81DA95072E92B69000E9CF21 /* TennisScoreTracker Watch AppUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "TennisScoreTracker Watch AppUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		81DA94E82E92B68F00E9CF21 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81DA94F72E92B69000E9CF21 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81DA95012E92B69000E9CF21 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		81DA94DE2E92B68F00E9CF21 = {
+			isa = PBXGroup;
+			children = (
+				81DA94EF2E92B68F00E9CF21 /* TennisScoreTracker Watch App */,
+				81DA94FD2E92B69000E9CF21 /* TennisScoreTracker Watch AppTests */,
+				81DA95072E92B69000E9CF21 /* TennisScoreTracker Watch AppUITests */,
+				81DA94E62E92B68F00E9CF21 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		81DA94E62E92B68F00E9CF21 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				81DA94E52E92B68F00E9CF21 /* TennisScoreTracker.app */,
+				81DA94EB2E92B68F00E9CF21 /* TennisScoreTracker Watch App.app */,
+				81DA94FA2E92B69000E9CF21 /* TennisScoreTracker Watch AppTests.xctest */,
+				81DA95042E92B69000E9CF21 /* TennisScoreTracker Watch AppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		81DA94E42E92B68F00E9CF21 /* TennisScoreTracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 81DA95122E92B69000E9CF21 /* Build configuration list for PBXNativeTarget "TennisScoreTracker" */;
+			buildPhases = (
+				81DA94E32E92B68F00E9CF21 /* Resources */,
+				81DA95112E92B69000E9CF21 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				81DA94EE2E92B68F00E9CF21 /* PBXTargetDependency */,
+			);
+			name = TennisScoreTracker;
+			packageProductDependencies = (
+			);
+			productName = TennisScoreTracker;
+			productReference = 81DA94E52E92B68F00E9CF21 /* TennisScoreTracker.app */;
+			productType = "com.apple.product-type.application.watchapp2-container";
+		};
+		81DA94EA2E92B68F00E9CF21 /* TennisScoreTracker Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 81DA950E2E92B69000E9CF21 /* Build configuration list for PBXNativeTarget "TennisScoreTracker Watch App" */;
+			buildPhases = (
+				81DA94E72E92B68F00E9CF21 /* Sources */,
+				81DA94E82E92B68F00E9CF21 /* Frameworks */,
+				81DA94E92E92B68F00E9CF21 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				81DA94EF2E92B68F00E9CF21 /* TennisScoreTracker Watch App */,
+			);
+			name = "TennisScoreTracker Watch App";
+			packageProductDependencies = (
+			);
+			productName = "TennisScoreTracker Watch App";
+			productReference = 81DA94EB2E92B68F00E9CF21 /* TennisScoreTracker Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		81DA94F92E92B69000E9CF21 /* TennisScoreTracker Watch AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 81DA95152E92B69000E9CF21 /* Build configuration list for PBXNativeTarget "TennisScoreTracker Watch AppTests" */;
+			buildPhases = (
+				81DA94F62E92B69000E9CF21 /* Sources */,
+				81DA94F72E92B69000E9CF21 /* Frameworks */,
+				81DA94F82E92B69000E9CF21 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				81DA94FC2E92B69000E9CF21 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				81DA94FD2E92B69000E9CF21 /* TennisScoreTracker Watch AppTests */,
+			);
+			name = "TennisScoreTracker Watch AppTests";
+			packageProductDependencies = (
+			);
+			productName = "TennisScoreTracker Watch AppTests";
+			productReference = 81DA94FA2E92B69000E9CF21 /* TennisScoreTracker Watch AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		81DA95032E92B69000E9CF21 /* TennisScoreTracker Watch AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 81DA95182E92B69000E9CF21 /* Build configuration list for PBXNativeTarget "TennisScoreTracker Watch AppUITests" */;
+			buildPhases = (
+				81DA95002E92B69000E9CF21 /* Sources */,
+				81DA95012E92B69000E9CF21 /* Frameworks */,
+				81DA95022E92B69000E9CF21 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				81DA95062E92B69000E9CF21 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				81DA95072E92B69000E9CF21 /* TennisScoreTracker Watch AppUITests */,
+			);
+			name = "TennisScoreTracker Watch AppUITests";
+			packageProductDependencies = (
+			);
+			productName = "TennisScoreTracker Watch AppUITests";
+			productReference = 81DA95042E92B69000E9CF21 /* TennisScoreTracker Watch AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		81DA94DF2E92B68F00E9CF21 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1640;
+				LastUpgradeCheck = 1640;
+				TargetAttributes = {
+					81DA94E42E92B68F00E9CF21 = {
+						CreatedOnToolsVersion = 16.4;
+					};
+					81DA94EA2E92B68F00E9CF21 = {
+						CreatedOnToolsVersion = 16.4;
+					};
+					81DA94F92E92B69000E9CF21 = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = 81DA94EA2E92B68F00E9CF21;
+					};
+					81DA95032E92B69000E9CF21 = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = 81DA94EA2E92B68F00E9CF21;
+					};
+				};
+			};
+			buildConfigurationList = 81DA94E22E92B68F00E9CF21 /* Build configuration list for PBXProject "TennisScoreTracker" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 81DA94DE2E92B68F00E9CF21;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 81DA94E62E92B68F00E9CF21 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				81DA94E42E92B68F00E9CF21 /* TennisScoreTracker */,
+				81DA94EA2E92B68F00E9CF21 /* TennisScoreTracker Watch App */,
+				81DA94F92E92B69000E9CF21 /* TennisScoreTracker Watch AppTests */,
+				81DA95032E92B69000E9CF21 /* TennisScoreTracker Watch AppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		81DA94E32E92B68F00E9CF21 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81DA94E92E92B68F00E9CF21 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81DA94F82E92B69000E9CF21 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81DA95022E92B69000E9CF21 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		81DA94E72E92B68F00E9CF21 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81DA94F62E92B69000E9CF21 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81DA95002E92B69000E9CF21 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		81DA94EE2E92B68F00E9CF21 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 81DA94EA2E92B68F00E9CF21 /* TennisScoreTracker Watch App */;
+			targetProxy = 81DA94ED2E92B68F00E9CF21 /* PBXContainerItemProxy */;
+		};
+		81DA94FC2E92B69000E9CF21 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 81DA94EA2E92B68F00E9CF21 /* TennisScoreTracker Watch App */;
+			targetProxy = 81DA94FB2E92B69000E9CF21 /* PBXContainerItemProxy */;
+		};
+		81DA95062E92B69000E9CF21 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 81DA94EA2E92B68F00E9CF21 /* TennisScoreTracker Watch App */;
+			targetProxy = 81DA95052E92B69000E9CF21 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		81DA950C2E92B69000E9CF21 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = JPSVCU4H4D;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		81DA950D2E92B69000E9CF21 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = JPSVCU4H4D;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		81DA950F2E92B69000E9CF21 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JPSVCU4H4D;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = TennisScoreTracker;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sueaty.cho.TennisScoreTracker.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 11.5;
+			};
+			name = Debug;
+		};
+		81DA95102E92B69000E9CF21 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JPSVCU4H4D;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = TennisScoreTracker;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sueaty.cho.TennisScoreTracker.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 11.5;
+			};
+			name = Release;
+		};
+		81DA95132E92B69000E9CF21 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JPSVCU4H4D;
+				INFOPLIST_KEY_CFBundleDisplayName = TennisScoreTracker;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sueaty.cho.TennisScoreTracker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		81DA95142E92B69000E9CF21 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JPSVCU4H4D;
+				INFOPLIST_KEY_CFBundleDisplayName = TennisScoreTracker;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sueaty.cho.TennisScoreTracker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		81DA95162E92B69000E9CF21 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JPSVCU4H4D;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sueaty.cho.TennisScoreTracker-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TennisScoreTracker Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TennisScoreTracker Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 11.5;
+			};
+			name = Debug;
+		};
+		81DA95172E92B69000E9CF21 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JPSVCU4H4D;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sueaty.cho.TennisScoreTracker-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TennisScoreTracker Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TennisScoreTracker Watch App";
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 11.5;
+			};
+			name = Release;
+		};
+		81DA95192E92B69000E9CF21 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JPSVCU4H4D;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sueaty.cho.TennisScoreTracker-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "TennisScoreTracker Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 11.5;
+			};
+			name = Debug;
+		};
+		81DA951A2E92B69000E9CF21 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JPSVCU4H4D;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sueaty.cho.TennisScoreTracker-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "TennisScoreTracker Watch App";
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 11.5;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		81DA94E22E92B68F00E9CF21 /* Build configuration list for PBXProject "TennisScoreTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81DA950C2E92B69000E9CF21 /* Debug */,
+				81DA950D2E92B69000E9CF21 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		81DA950E2E92B69000E9CF21 /* Build configuration list for PBXNativeTarget "TennisScoreTracker Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81DA950F2E92B69000E9CF21 /* Debug */,
+				81DA95102E92B69000E9CF21 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		81DA95122E92B69000E9CF21 /* Build configuration list for PBXNativeTarget "TennisScoreTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81DA95132E92B69000E9CF21 /* Debug */,
+				81DA95142E92B69000E9CF21 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		81DA95152E92B69000E9CF21 /* Build configuration list for PBXNativeTarget "TennisScoreTracker Watch AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81DA95162E92B69000E9CF21 /* Debug */,
+				81DA95172E92B69000E9CF21 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		81DA95182E92B69000E9CF21 /* Build configuration list for PBXNativeTarget "TennisScoreTracker Watch AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81DA95192E92B69000E9CF21 /* Debug */,
+				81DA951A2E92B69000E9CF21 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 81DA94DF2E92B68F00E9CF21 /* Project object */;
+}
