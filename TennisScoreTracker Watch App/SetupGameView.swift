@@ -8,25 +8,31 @@
 import SwiftUI
 
 struct SetupGameView: View {
+    @EnvironmentObject var settings: TennisSettings
     @ObservedObject var match: TennisMatch
     var onStart: (() -> Void)?
     
     var body: some View {
-        VStack(spacing: 10) {
+        VStack {
+            Text("Set-Scoring Options")
+                .font(.footnote)
+            
             ChoiceButton(
-                title: "Singles",
-                isSelected: match.gameType == .singles
+                title: "Advantage",
+                isSelected: settings.useAdvantage == true
             ) {
-                match.gameType = .singles
+                settings.useAdvantage.toggle()
             }
             ChoiceButton(
-                title: "Doubles",
-                isSelected: match.gameType == .doubles
+                title: "Tiebreak",
+                isSelected: settings.useTiebreakAtSixAll == true
             ) {
-                match.gameType = .doubles
+                settings.useTiebreakAtSixAll.toggle()
             }
             
+            Spacer(minLength: 8)
             Divider()
+            Spacer(minLength: 8)
             
             Button {
                 onStart?()
@@ -61,5 +67,6 @@ struct ChoiceButton: View {
 #Preview {
     let match = TennisMatch()
     SetupGameView(match: match)
-        .environment(\.locale, .init(identifier: "ko"))
+//        .environment(\.locale, .init(identifier: "ko"))
+        .environmentObject(TennisSettings())
 }

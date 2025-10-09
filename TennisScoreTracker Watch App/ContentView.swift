@@ -2,6 +2,7 @@ import SwiftUI
 
 // MARK: - Views
 struct ContentView: View {
+    @StateObject private var settings = TennisSettings()
     @StateObject private var match = TennisMatch()
     @State private var isSetupShown = true
     
@@ -9,6 +10,10 @@ struct ContentView: View {
         Group {
             if isSetupShown {
                 SetupGameView(match: match) {
+                    match.configureRules(
+                        useAdvantage: settings.useAdvantage,
+                        useTiebreak: settings.useTiebreakAtSixAll
+                    )
                     isSetupShown = false
                 }
             } else {
@@ -18,9 +23,11 @@ struct ContentView: View {
                 }
             }
         }
+        .environmentObject(settings)
     }
 }
 
 #Preview {
     ContentView()
+        .environmentObject(TennisSettings())
 }
