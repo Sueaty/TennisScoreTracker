@@ -19,19 +19,23 @@ struct ScoreView: View {
                     teamName: match.leftTeam.name,
                     gamesWonCount: match.leftWonGames,
                     currentScore: match.leftLabel(),
-                    isWinning: match.currentlyWinning(forLeft: true)
+                    isWinning: match.currentlyWinning(forLeft: true),
+                    isWinner: match.isCurrentWinner(forLeft: true)
                 ) {
                     match.point(toLeft: true)
                 }
+                .disabled(match.setFinished)
                 Spacer()
                 PointCard(
                     teamName: match.rightTeam.name,
                     gamesWonCount: match.rightWonGames,
                     currentScore: match.rightLabel(),
-                    isWinning: match.currentlyWinning(forLeft: false)
+                    isWinning: match.currentlyWinning(forLeft: false),
+                    isWinner: match.isCurrentWinner(forLeft: false)
                 ) {
                     match.point(toLeft: false)
                 }
+                .disabled(match.setFinished)
             }
             
             // 컨트롤
@@ -64,6 +68,7 @@ struct PointCard: View {
     let gamesWonCount: Int
     let currentScore: LocalizedStringResource
     let isWinning: Bool
+    let isWinner: Bool
     let addPointAction: () -> Void
     
     var body: some View {
@@ -74,7 +79,7 @@ struct PointCard: View {
                     .font(.title).bold()
                 Text(String(localized: currentScore))
                     .font(.headline)
-                Text("Tap")
+                Text(isWinner ? "Winner" : "Tap")
                     .font(.caption2)
                     .foregroundStyle(.secondary)
             }

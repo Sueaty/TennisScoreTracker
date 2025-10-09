@@ -34,6 +34,9 @@ final class TennisMatch: ObservableObject {
     let leftTeam = Team(name: "ME")
     let rightTeam = Team(name: "💩")
     
+    @Published private(set) var setFinished: Bool = false
+    @Published private(set) var winner: Team?
+    
     @Published private(set) var advantageEnabled: Bool = false
     @Published private(set) var tiebreakEnabled: Bool = false
     @Published private(set) var inTiebreak: Bool = false
@@ -68,8 +71,10 @@ final class TennisMatch: ObservableObject {
         rightCurrentPoints = last.rightPoints
         leftWonGames = last.leftGames
         rightWonGames = last.rightGames
-        // TB re-evaluation needed after undo
         inTiebreak = (tiebreakEnabled && leftWonGames == 6 && rightWonGames == 6)
+        setFinished = false
+        winner = nil
+        evaluateSetIfEnded()
     }
 
     func resetMatch() {
@@ -78,6 +83,8 @@ final class TennisMatch: ObservableObject {
         leftWonGames = 0
         rightWonGames = 0
         inTiebreak = false
+        setFinished = false
+        winner = nil
         history.removeAll()
     }
     
@@ -103,7 +110,9 @@ final class TennisMatch: ObservableObject {
         if inTiebreak {
             if (leftCurrentPoints >= 7 || rightCurrentPoints >= 7),
                abs(leftCurrentPoints - rightCurrentPoints) >= 2 {
-                if leftCurrentPoints > rightCurrentPoints {
+                // decide winner directly from TB points
+                let leftWonTB = leftCurrentPoints > rightCurrentPoints
+                if leftWonTB {
                     leftWonGames += 1  // results in 7–6
                 } else {
                     rightWonGames += 1
@@ -111,6 +120,8 @@ final class TennisMatch: ObservableObject {
                 leftCurrentPoints = 0
                 rightCurrentPoints = 0
                 inTiebreak = false
+                winner = leftWonTB ? leftTeam : rightTeam
+                setFinished = true
                 WKInterfaceDevice.current().play(.success)
             }
             return
@@ -128,10 +139,10 @@ final class TennisMatch: ObservableObject {
             }
             leftCurrentPoints = 0
             rightCurrentPoints = 0
+            evaluateSetIfEnded()
             WKInterfaceDevice.current().play(.success)
             return
         }
-
         // Standard AD scoring
         if leftCurrentPoints >= 4 || rightCurrentPoints >= 4 {
             if abs(leftCurrentPoints - rightCurrentPoints) >= 2 {
@@ -142,7 +153,26 @@ final class TennisMatch: ObservableObject {
                 }
                 leftCurrentPoints = 0
                 rightCurrentPoints = 0
+                evaluateSetIfEnded()
                 WKInterfaceDevice.current().play(.success)
+            }
+        }
+    }
+    
+    private func evaluateSetIfEnded() {
+        let maxGames = max(leftWonGames, rightWonGames)
+        let diff = abs(leftWonGames - rightWonGames)
+        
+        if tiebreakEnabled {
+            /// Note: 7–6 (or 6–7) via tie-break is handled in evaluateGameIfEnded(), where `winner` and `setFinished` are set.
+            if (maxGames == 6 && diff >= 2) || (maxGames == 7 && diff >= 2) {
+                setFinished = true
+                winner = (leftWonGames > rightWonGames) ? leftTeam : rightTeam
+            }
+        } else {
+            if maxGames >= 6 && diff >= 2 {
+                setFinished = true
+                winner = (leftWonGames > rightWonGames) ? leftTeam : rightTeam
             }
         }
     }
@@ -169,6 +199,16 @@ final class TennisMatch: ObservableObject {
             } else {
                 return false
             }
+        }
+    }
+    
+    func isCurrentWinner(forLeft: Bool) -> Bool {
+        guard let winner else { return false }
+        return switch forLeft {
+        case true:
+            winner.name == leftTeam.name
+        case false:
+            winner.name == rightTeam.name
         }
     }
 
