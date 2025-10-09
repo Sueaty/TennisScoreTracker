@@ -1,6 +1,9 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "-" : {
+
+    },
     "%lld" : {
       "shouldTranslate" : false
     },
@@ -18,6 +21,17 @@
     },
     "AD" : {
       "shouldTranslate" : false
+    },
+    "Advantage" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "어드밴티지"
+          }
+        }
+      }
     },
     "Deuce" : {
       "extractionState" : "manual",
@@ -62,6 +76,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "재시작"
+          }
+        }
+      }
+    },
+    "Set-Scoring Options" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "점수 산정 방식"
           }
         }
       }
@@ -115,6 +139,17 @@
         }
       }
     },
+    "Tiebreak" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "타이브레이크"
+          }
+        }
+      }
+    },
     "undo" : {
       "localizations" : {
         "en" : {
@@ -126,7 +161,17 @@
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "뒤로가기"
+            "value" : "실행취소"
+          }
+        }
+      }
+    },
+    "Winner" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "우승"
           }
         }
       }
