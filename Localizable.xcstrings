@@ -2,7 +2,14 @@
   "sourceLanguage" : "en",
   "strings" : {
     "-" : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "-"
+          }
+        }
+      }
     },
     "%lld" : {
       "shouldTranslate" : false
